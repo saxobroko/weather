@@ -1,0 +1,94 @@
+.today {
+  position: relative;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 0 40px 0;
+  min-height: 100vh;
+
+  img {
+    max-width: 150px;
+  }
+
+  &__loading {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+  }
+
+  &__temp {
+    font-size: 8rem;
+    line-height: 10rem;
+    font-weight: 500;
+    margin-top: 18px;
+
+    span {
+      font-size: 6rem;
+      line-height: 8rem;
+      color: $grey2;
+    }
+  }
+
+  &__state {
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    margin-top: 23px;
+    color: $grey2;
+  }
+
+  &__date {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-top: 28px;
+    color: $grey3;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+
+    span {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      color: $grey3;
+      margin-left: 8px;
+    }
+  }
+
+  .btn-search {
+    position: absolute;
+    top: 18px;
+    left: 11px;
+  }
+
+  .detect-location {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 18px;
+    right: 11px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(110, 112, 122, 0.3);
+    padding: 8px;
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and(min-width:992px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 460px;
+    // min-height: 100vh;
+  }
+}

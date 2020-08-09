@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+@import "_variables.scss";
+@import "_today.scss";
+@import "_forecast.scss";
+@import "_weathercard.scss";
+@import "_highlights.scss";
+@import "_navdrawer.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 10px 18px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #e7e7eb;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.btn-default {
+  background: #6e707a;
+}
+
+.btn-blue {
+  background: #3c47e9;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #100e1d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #43497a;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #262a4a;
+}
+
+.container {
+  padding: 16px 32px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media screen and (min-width: 992px) {
+    padding: 32px 48px;
+  }
+}
+
+.main {
+  display: grid;
+  min-height: 100vh;
+
+  @media screen and (min-width: 992px) {
+    // grid-template-columns: 360px 1fr;
+    display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // grid-template-columns: 460px 1fr;
+  }
+
+  .right {
+    background-color: $dark-blue;
+    // padding: 42px 100px;
+    // padding: 18px;
+    // max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .unit-toggle {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      width: 100%;
+      margin-bottom: 66px;
+
+      .btn-unit {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: #585676;
+        border: none;
+        outline: none;
+        margin-right: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        color: #e7e7eb;
+        font-weight: bold;
+
+        &.active {
+          background-color: #e7e7eb;
+          color: #110e3c;
+        }
+
+        &:hover {
+          background-color: #e7e7eb;
+          color: #110e3c;
+        }
+      }
+    }
+
+    @media screen and(min-width:992px) {
+      padding-left: 460px;
+    }
+  }
+}
