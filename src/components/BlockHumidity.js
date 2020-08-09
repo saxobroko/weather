@@ -1,7 +1,5 @@
 import React from "react";
 
-import ProgressBar from "./ProgressBar";
-
 const BlockHumidity = ({ weather }) => {
   return (
     <div className="block block-humidity">
@@ -10,8 +8,6 @@ const BlockHumidity = ({ weather }) => {
         {Math.round(weather.humidity)}
         <span>%</span>
       </p>
-
-      <ProgressBar value={weather.humidity} />
     </div>
   );
 };
